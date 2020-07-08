@@ -17,7 +17,7 @@
                 <TextBox Name="GroupTextBox" MaxLength="4" Text="0002" Width="50" TextAlignment="Center"/>
                 <TextBlock TextWrapping="Wrap" Width="47" Height="18" Margin="10,0,0,0" >Element</TextBlock>
                 <TextBox Name="ElementTextBox" MaxLength="4" Text="0000" Width="50" TextAlignment="Center"/>
-                <CheckBox Name="ValueCheckBox" Margin="40,0,5,0" Content="Find Value" Click="ValueCheckBox_Click"/>
+                <CheckBox Name="ValueCheckBox" Margin="40,0,5,0" Content="Contains Value" Click="ValueCheckBox_Click" Checked="ValueCheckBox_Checked"/>
                 <TextBox Name="ValueTextBox" Text="" Width="189" TextAlignment="Left" IsEnabled="False"/>
             </StackPanel>
         </GroupBox>

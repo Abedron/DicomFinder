@@ -33,7 +33,7 @@ namespace DicomFinder
                     {
                         if (ValueCheckBox)
                         {
-                            if (value.Contains(valueBox))
+                            if (value.ToLower().Contains(valueBox.ToLower()))
                             {
                                 files.Add(new FileContext(path, value, readData.Status));
                             }
