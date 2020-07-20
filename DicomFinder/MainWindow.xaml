@@ -14,10 +14,10 @@
         <GroupBox Header="Search by DICOM Tag" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="579" Margin="10,33,0,0" Padding="3, 10, 0, 0">
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Width="36" Height="18">Group</TextBlock>
-                <TextBox Name="GroupTextBox" MaxLength="4" Text="0002" Width="50" TextAlignment="Center"/>
+                <TextBox Name="GroupTextBox" MaxLength="4" Text="0002" CharacterCasing="Upper" Width="50" TextAlignment="Center" PreviewTextInput="OnPreviewTextInput"/>
                 <TextBlock TextWrapping="Wrap" Width="47" Height="18" Margin="10,0,0,0" >Element</TextBlock>
-                <TextBox Name="ElementTextBox" MaxLength="4" Text="0000" Width="50" TextAlignment="Center"/>
-                <CheckBox Name="ValueCheckBox" Margin="40,0,5,0" Content="Contains Value" Click="ValueCheckBox_Click" Checked="ValueCheckBox_Checked"/>
+                <TextBox Name="ElementTextBox" MaxLength="4" Text="0000" CharacterCasing="Upper" Width="50" TextAlignment="Center" PreviewTextInput="OnPreviewTextInput"/>
+                <CheckBox Name="ValueCheckBox" Margin="40,0,5,0" Content="Contains Value" Click="ValueCheckBox_Click"/>
                 <TextBox Name="ValueTextBox" Text="" Width="189" TextAlignment="Left" IsEnabled="False"/>
             </StackPanel>
         </GroupBox>

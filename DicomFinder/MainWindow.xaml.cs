@@ -1,6 +1,7 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -39,6 +40,11 @@ namespace DicomFinder
 
             TimeLabel.Content = "Time: " + (int)endTime.TotalMilliseconds;
             CountLabel.Content = "Count: " + list.Count;
+        }
+
+        private void OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !int.TryParse(e.Text, NumberStyles.HexNumber, CultureInfo.CurrentCulture, out _);
         }
 
         private void ValueCheckBox_Click(object sender, RoutedEventArgs e)
