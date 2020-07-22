@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -13,6 +14,8 @@ namespace DicomFinder
         public MainWindow()
         {
             InitializeComponent();
+
+            Title = "Dicom Finder " + Assembly.GetExecutingAssembly().GetName().Version;
 
             // FolderField.Text = @"C:\Testing\Images\CT_3D_EXTREMITY_1747";
             FolderField.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
